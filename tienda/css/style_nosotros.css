@@ -1,0 +1,198 @@
+html {      
+      box-sizing: border-box;
+      font-size: 62.5%; /* 1REM = 10px */
+  }
+  *, *:before, *:after {
+      box-sizing: inherit;
+}
+body {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.6rem;   
+      line-height: 2;
+  }
+h1{
+      text-align: center;            
+}
+h1, 
+h2, 
+h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 2rem 0;
+}
+h1 {
+    font-size: 3.8rem;
+}
+@media (min-width: 768px) { 
+    h1 {
+        font-size: 5rem;
+    }
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+/** Header y Navegacion **/
+.nombre-sitio {
+    margin-top: 5rem;
+    text-align: center;
+}
+.nombre-sitio span {
+    color: #037bc0;
+}
+.contenedor-navegacion {
+    border-top: .1rem solid #e1e1e1;
+}
+.nav-principal {    
+    padding: 2rem 0;
+    /*  indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. */
+    display: flex;
+    /* Coloca los elementos en columna */
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .nav-principal {
+        justify-content: space-between;
+        /* Coloca los elementos en fila */
+        flex-direction: row;
+    }
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    /* especifica el tamaño de las imágenes de fondo. */
+    /* Escala la imagen al mayor tamaño posible sin estirarla.  */
+    background-size: cover;
+    background-position: center center;
+    height: 25rem;
+}
+
+@media (min-width: 768px) { 
+    .hero {
+        height: 55rem;
+    }
+}
+/** Bloque Nosotros */
+.sobre-nosotros {
+    background-image: linear-gradient( to bottom, transparent 50%, white 50%, white 10% ), url(../img/nosotros.jpg);    
+    background-position: center, top left;
+    background-repeat: no-repeat;    
+    /* especifica el tamaño de las imágenes de fondo. */
+    /* Escala la imagen al mayor tamaño posible sin estirarla.  */
+    background-size: 100%, 70rem;
+    /* padding: 5rem 0; */
+}
+.texto-nosotros h2{
+    font-size: 3.2rem;
+}
+.texto-nosotros p,h2{    
+    color: black;
+}
+@media (min-width: 768px) { 
+    .texto-nosotros h2{ 
+        font-size: 4rem;
+    }
+    .sobre-nosotros {        
+        background-image: linear-gradient( to right, transparent 50%, white 50%, white 100% ), url(../img/nosotros.jpg);        
+        background-position: left center ;
+        padding: 10rem 0;
+        /* especifica el tamaño de las imágenes de fondo. */
+        /* Escala la imagen al mayor tamaño posible sin estirarla.  */        
+        background-size: 100%, 160rem;
+    }
+}
+.sobre-nosotros-grid {
+    display: grid;
+    /*  cada valor especifica el tamaño de la fila respectiva. */    
+    /* especifica el número (y los anchos) de fila en un diseño de cuadrícula. */
+    grid-template-rows: repeat(2, 1fr);
+}
+@media (min-width: 768px) { 
+    .sobre-nosotros-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: unset;
+        column-gap: 10rem;
+    }
+}
+.texto-nosotros {
+    /* especifica el tamaño y la ubicación de un elemento de la cuadrícula 
+    dentro de la fila de la cuadrícula contribuyendo una línea */
+    grid-row: 2 / 3;
+    color: #FFF;
+    padding: 5rem;
+}
+@media (min-width: 768px) { 
+    .texto-nosotros {
+    /* especifica el tamaño y la ubicación de un elemento de la cuadrícula 
+    dentro de la fila de la cuadrícula contribuyendo una línea */        
+        grid-column: 2 / 3;
+    }
+}
+
+/** Footer **/
+.site-footer {
+      border-top: 1px solid #e1e1e1;
+      margin-top: 5rem;
+      padding-top: 5rem;
+      text-align: center;
+  }
+  .site-footer h3 {
+      font-family: 'Playfair Display', serif;    
+      margin-bottom: .5rem;     
+      font-size: 2.4rem;
+      color:black;
+      background-color: white;
+  }
+  @media (min-width: 768px) {     
+      .site-footer h3 {
+          font-family: 'Playfair Display', serif;    
+          margin-bottom: .5rem;     
+          font-size: 3rem;
+          color:black;
+          background-color: white;
+          text-align: left;
+      }
+      .grid-footer {
+          display: grid;   
+          grid-template-columns: repeat(3, 1fr);        
+          gap: 2rem;
+      }
+  }
+  
+  .grid-footer > div {
+      margin-bottom: 2rem;
+  }
+  @media (min-width: 768px) { 
+      .grid-footer > div {
+          margin: 0;
+      }
+  }
+  
+  
+  .footer-menu a {
+      text-decoration: none;      
+      color:black;       
+      display: block;
+      
+  }
+  @media (min-width: 768px) { 
+      .footer-menu a {
+          text-decoration: none;
+          
+          color:black;       
+          display: block;        
+          text-align: left;
+      }
+  }
+  
+  .copyright {
+      margin-top: 5rem;
+      text-align: center;
+  }
+  

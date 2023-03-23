@@ -1,0 +1,185 @@
+html {      
+      box-sizing: border-box;
+      font-size: 62.5%; /* 1REM = 10px */
+  }
+  *, *:before, *:after {
+      box-sizing: inherit;
+     }
+     .contenedor {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+    /** Header y Navegacion **/
+    header h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 5rem;
+    }
+    .contenedor a{
+        text-decoration: none;
+        color: black;
+    }
+    .nombre-sitio {
+        margin-top: 5rem;
+        text-align: center;
+    }
+    .nombre-sitio span {
+        color: #037bc0;
+    }
+    .contenedor-navegacion {
+        border-top: .1rem solid #e1e1e1;
+    }
+    .nav-principal {    
+        padding: 2rem 0;
+        /*  indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. */
+        display: flex;
+        /* Coloca los elementos en columna */
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    @media (min-width: 768px) { 
+        .nav-principal {
+            justify-content: space-between;
+            /* Coloca los elementos en fila */
+            flex-direction: row;
+        }
+    }
+    
+    .hero {
+        background-image: url(../img/principal.jpg);
+        background-repeat: no-repeat;
+        /* especifica el tamaño de las imágenes de fondo. */
+        /* Escala la imagen al mayor tamaño posible sin estirarla.  */
+        background-size: cover;
+        background-position: center center;
+        height: 25rem;
+    }
+    
+    @media (min-width: 768px) { 
+        .hero {
+            height: 55rem;
+        }
+    }     
+body {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.6rem;   
+      line-height: 2;
+  }
+h1{
+      text-align: center;            
+} 
+h3 {
+    color: white;
+    text-align: center;
+    background-color: #037bc0;
+    font-family: 'Playfair Display', serif;       
+    margin-bottom: -4%;
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+article{
+    width: 33%;            
+    margin-left: 33%;
+    margin-right: 33%;
+}
+.preguntas{        
+    border: 1.5px solid #000000;
+    margin-bottom: 10%;
+}
+form{
+    margin: 10% 2% 5% 1%;
+}
+.entradas{        
+    display: flex;    
+    justify-content: space-between;
+}
+.input{
+    margin-top: 3%;
+    width: 80%;
+    height: 35px;
+}
+textarea{
+    width: 80%;
+}
+select{
+    margin-top: 3%;
+    width: 80%;    
+}
+#categ{
+    height:auto;
+}
+.btn {
+    background-color: #8cbc00;
+    display: block;
+    color: #FFF;    
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+    text-align: center;
+    border: none;
+    margin-left: 33%;
+    /* width: 100%; */
+}
+.btn:hover{
+    cursor: pointer;
+}
+/** Footer **/
+.site-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+.site-footer h3 {
+    font-family: 'Playfair Display', serif;    
+    margin-bottom: .5rem;     
+    font-size: 2.4rem;
+    color:black;
+    background-color: white;
+}
+@media (min-width: 768px) {     
+    .site-footer h3 {
+        font-family: 'Playfair Display', serif;    
+        margin-bottom: .5rem;     
+        font-size: 3rem;
+        color:black;
+        background-color: white;
+        text-align: left;
+    }
+    .grid-footer {
+        display: grid;   
+        grid-template-columns: repeat(3, 1fr);        
+        gap: 2rem;
+    }
+}
+
+.grid-footer > div {
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) { 
+    .grid-footer > div {
+        margin: 0;
+    }
+}
+
+
+.footer-menu a {
+    text-decoration: none;      
+    color:black;       
+    display: block;
+    text-align: center;
+}
+@media (min-width: 768px) { 
+    .footer-menu a {
+        text-decoration: none;
+        margin-left: 5%;    
+        color:black;       
+        display: block;        
+        text-align: left;
+    }
+}
+
+.copyright {
+    margin-top: 5rem;
+    text-align: center;
+}

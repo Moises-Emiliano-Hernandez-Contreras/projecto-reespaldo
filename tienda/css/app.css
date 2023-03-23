@@ -1,0 +1,377 @@
+html {
+    /*permite incluir el relleno y el borde en el ancho y alto total de un elemento.*/
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1REM = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    /* establece la altura de una casilla remarcada por líneas */
+    line-height: 2;
+}
+
+/* Globales */
+h1, 
+h2, 
+h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 2rem 0;
+}
+h1 {
+    font-size: 3.8rem;
+}
+@media (min-width: 768px) { 
+    h1 {
+        font-size: 5rem;
+    }
+}
+h2 {
+    font-size: 3.2rem;
+}
+@media (min-width: 768px) { 
+    h2 {
+        font-size: 4rem;
+    }
+}
+h3 {
+    font-size: 2.4rem;
+}
+@media (min-width: 768px) { 
+    h3 {
+        font-size: 3rem;
+    }
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    /*  display nos permite definir como será mostrado un cierto elemento HTML. */
+    /* Un elemento block siempre tiene algo de espacio por encima y debajo, que lo separa de los demás elementos */
+    display: block;
+}
+
+.btn {
+    background-color: #8cbc00;
+    display: block;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out ;
+    text-align: center;
+    border: none;
+    width: 100%;
+}
+.btn:hover {
+    background-color: #769c02;
+    /*  especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento. */
+    /* cursor utilizado cuando se encuentra sobre enlaces (normalmente una mano) */
+    cursor: pointer;
+}
+
+@media (min-width: 768px) { 
+    .btn {
+        width: auto;
+    }
+}
+
+
+/** Utilidades */
+.text-center {
+    text-align: center;
+}
+
+@media (min-width: 768px) { 
+    .max-width-30 {
+        max-width: 30rem;
+    }
+}
+
+
+/** Header y Navegacion **/
+.nombre-sitio {
+    margin-top: 5rem;
+    text-align: center;
+}
+.nombre-sitio span {
+    color: #037bc0;
+}
+.contenedor-navegacion {
+    border-top: .1rem solid #e1e1e1;
+}
+
+.nav-principal {
+    padding: 2rem 0;
+    /*  indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. */
+    display: flex;
+    /* Coloca los elementos en columna */
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .nav-principal {
+        justify-content: space-between;
+        /* Coloca los elementos en fila */
+        flex-direction: row;
+    }
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    /* especifica el tamaño de las imágenes de fondo. */
+    /* Escala la imagen al mayor tamaño posible sin estirarla.  */
+    background-size: cover;
+    background-position: center center;
+    height: 25rem;
+}
+
+@media (min-width: 768px) { 
+    .hero {
+        height: 55rem;
+    }
+}
+
+/** Categorias **/
+.categorias {
+    padding: 5rem 0;
+}
+.categoria {
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) { 
+    .categoria {
+        margin-bottom: 0;
+    }
+}
+.categoria img {
+    width: 100%;
+}
+.categoria a {
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.categoria a:hover {
+    background-color: #037bc0;
+    color: #FFFFFF;
+    border-bottom-right-radius: 1rem;
+}
+@media (min-width: 768px) { 
+    .listado-categorias {
+        display: grid;
+        /* especifica el número (y los anchos) de columnas en un diseño de cuadrícula. */
+        /*  cada valor especifica el tamaño de la columna respectiva. */
+        grid-template-columns: repeat(3, 1fr);
+        /* especifica los canales entre las filas y las columnas de la cuadrícula. */
+        gap: 2rem;
+    }
+    
+}
+
+
+/** Footer **/
+.site-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+.site-footer h3 {
+    margin-bottom: .5rem;
+    text-align: center;
+}
+@media (min-width: 768px) { 
+    .site-footer h3 {
+        text-align: left;
+    }
+    .grid-footer {
+        display: grid;
+        /* especifica el número (y los anchos) de fila en un diseño de cuadrícula. */        
+        /*  cada valor especifica el tamaño de la fila respectiva. */    
+        grid-template-columns: repeat(3, 1fr);
+        /*  especifica los canales entre las filas y las columnas de la cuadrícula. */
+        gap: 2rem;
+    }
+}
+
+.grid-footer > div {
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) { 
+    .grid-footer > div {
+        margin: 0;
+    }
+}
+
+
+.footer-menu a {
+    display: block;
+    text-align: center;
+}
+@media (min-width: 768px) { 
+    .footer-menu a {
+        text-align: left;
+    }
+}
+
+.copyright {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+/** Nosotros **/
+.contenido-nosotros {
+    display: grid;
+    /* especifica el número (y los anchos) de fila en un diseño de cuadrícula. */        
+    /*  cada valor especifica el tamaño de la fila respectiva. */        
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax( 25rem, 1fr ) );
+    /* especifica la brecha entre columnas */
+    column-gap: 4rem;
+}
+
+.informacion-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem;
+}
+@media (min-width: 768px) { 
+    .informacion-nosotros {
+        padding: 0;
+    }
+}
+
+/** Blog */
+@media (min-width: 768px) { 
+    .contenedor-blog {
+        display: grid;
+    /* especifica el número (y los anchos) de fila en un diseño de cuadrícula. */        
+    /*  cada valor especifica el tamaño de la fila respectiva. */                
+        grid-template-columns: 2fr 1fr;
+        /* especifica la brecha entre columnas */
+        column-gap: 4rem;
+    }
+}
+
+.entrada {
+    border-bottom: 2px solid #e1e1e1;
+    margin-bottom: 2rem;
+    padding-bottom: 4rem;
+}
+.entrada h2 {
+    text-align: center;
+}
+@media (min-width: 768px) { 
+    .entrada h2 {
+        text-align: left;
+    }
+}
+.contenido-blog {
+    padding: 2rem;
+}
+.entrada:last-of-type {
+    border: none;
+}
+@media (min-width: 768px) { 
+    .entrada-meta {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.entrada-meta p {
+    font-weight: bold;
+}
+.entrada-meta span {
+    color: #037bc0;
+}
+.contenido-entrada-blog {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+/** Galeria **/
+.galeria {
+    /* vuelve al elemento lista el formato */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    /* especifica el número (y los anchos) de fila en un diseño de cuadrícula. */        
+    /*  cada valor especifica el tamaño de la fila respectiva. */    
+    grid-template-columns: repeat(2, 1fr);
+    /*  especifica los canales entre las filas y las columnas de la cuadrícula. */
+    gap: 2rem;
+}
+
+@media (min-width: 768px) { 
+    .galeria {
+    /* especifica el número (y los anchos) de fila en un diseño de cuadrícula. */        
+    /*  cada valor especifica el tamaño de la fila respectiva. */            
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.galeria img {
+    height: 40rem;
+    width: 40rem;
+        /*  indica cómo el contenido de un elemento reemplazado,
+        por ejemplo un <img> o <video>, debería redimensionarse
+        para ajustarse a su contenedor. */        
+        /* El contenido reemplazado se dimensiona para mantener su relación de 
+        aspecto mientras llena el cuadro de contenido completo del elemento */    
+    object-fit: cover;
+}
+/* Formulario */
+.formulario {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.formulario fieldset {
+   border: 1px solid black;
+   margin-bottom: 2rem;
+}
+.formulario legend {
+    background-color: #005485;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 4rem;
+
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo label {
+    /* especifíca la base flexible, la cual es el tamaño inicial de un elemento flexible. */
+    flex-basis: 10rem;
+} 
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select  {
+    /*  indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. */
+    /* El valor predeterminado es 1 cuando se omite. el flex-grow */
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
+
